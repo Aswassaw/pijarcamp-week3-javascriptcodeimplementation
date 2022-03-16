@@ -1,5 +1,6 @@
 const pijarFood = (harga, voucher, jarak, pajak = false) => {
-  if (typeof harga !== number) {
+  // validasi
+  if (typeof harga !== "number") {
     console.log("Parameter pertama (harga) harus bertipe number.");
   } else if (typeof voucher !== "string") {
     console.log("Parameter kedua (voucher) harus bertipe string.");
@@ -48,4 +49,4 @@ const pijarFood = (harga, voucher, jarak, pajak = false) => {
   }
 };
 
-pijarFood(75000, "PIJARFOOD5", 5, true);
+pijarFood(75000, "PIJARFOOD5", 5, null);
