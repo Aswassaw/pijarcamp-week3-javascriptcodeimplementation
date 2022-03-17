@@ -6,9 +6,7 @@ const divideAndSort = (angka) => {
       const hasil = Math.floor(angka)
         .toString()
         .split(0)
-        .map((item) => {
-          return item.split("").sort().join("");
-        })
+        .map((item) => item.split("").sort().join(""))
         .join("");
 
       console.log(parseInt(hasil));
