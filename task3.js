@@ -1,18 +1,21 @@
 const divideAndSort = (angka) => {
-  if(angka > Number.MAX_SAFE_INTEGER) {
-    if (typeof angka === "number") {
+  if (typeof angka === "number") {
+    // validasi agar angka tidak melebihi batas aman integer
+    if (angka < Number.MAX_SAFE_INTEGER) {
       const hasil = angka
         .toString()
         .split(0)
         .map((item) => item.split("").sort().join(""))
         .join("");
-  
+
       console.log(hasil);
     } else {
-      console.log("Parameter pertama (angka) harus bertipe number.");
+      console.log(
+        "Parameter pertama (angka) tidak boleh lebih dari 9007199254740991"
+      );
     }
   } else {
-    console.log("Parameter pertama (angka) tidak boleh lebih dari 9007199254740991");
+    console.log("Parameter pertama (angka) harus bertipe number.");
   }
 };
 
