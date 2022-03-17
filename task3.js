@@ -3,7 +3,7 @@ const divideAndSort = (angka) => {
   if (typeof angka === "number") {
     // validasi agar angka tidak melebihi batas aman integer
     if (angka < Number.MAX_SAFE_INTEGER) {
-      const hasil = Math.floor(angka)
+      const hasil = angka
         .toString()
         .split(0)
         .map((item) => item.split("").sort().join(""))
