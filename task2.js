@@ -49,4 +49,4 @@ const pijarFood = (harga, voucher, jarak, pajak = false) => {
   }
 };
 
-pijarFood(75000, "PIJARFOOD5", 5, null);
+pijarFood(75000, "PIJARFOOD5", 5, true);
