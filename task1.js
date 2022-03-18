@@ -1,12 +1,28 @@
 // deteksi palindrom
-const kata = "malam";
+const cekPalindrom = (kata) => {
+  if (typeof kata === "string") {
+    if (
+      kata.toLowerCase() === kata.toLowerCase().split("").reverse().join("")
+    ) {
+      console.log("Palindrom");
+    } else {
+      console.log("Bukan Palindrom");
+    }
+  } else {
+    console.log("Parameter pertama (kata) harus bertipe string.");
+  }
+};
 
-if (kata.toLowerCase() === kata.toLowerCase().split("").reverse().join("")) {
-  console.log("Palindrom");
-} else {
-  console.log("Bukan Palindrom");
-}
+cekPalindrom("malam");
 
 // reverse words
-const kalimat = "Saya belajar Javascript";
-console.log(kalimat.split(" ").reverse().join(" "));
+const reverseWords = (kalimat) => {
+  if (typeof kalimat === "string") {
+    const hasil = kalimat.split(" ").reverse().join(" ");
+    console.log(hasil);
+  } else {
+    console.log("Parameter pertama (kata) harus bertipe string.");
+  }
+};
+
+reverseWords("Saya belajar Javascript");
